@@ -75,3 +75,13 @@ The database contains a table users with the following columns:
 * followers: Number of followers.
 * following: Number of users the GitHub user is following.
 * html_url: URL to the user's GitHub profile.
+
+## Tests
+
+Database:
+
+https://youtu.be/GIKRf5LJ3c0
+
+App:
+
+https://youtu.be/4WH5srdB29w
