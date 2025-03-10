@@ -59,7 +59,7 @@ npx knex migrate:latest
 
 ## Usage
 
-On the app, you can interact with it according to the provided menu options in the terminal. The app fetches GitHub user data based on the username and stores it in a PostgreSQL database. You can query the database to view all users or filter users by location or programming language.
+Using `node dist/app.js` you can run the application. On the app, you can interact with it according to the provided menu options in the terminal. The app fetches GitHub user data based on the username and stores it in a PostgreSQL database. You can query the database to view all users or filter users by location or programming language.
 
 ## Database Schema
 
