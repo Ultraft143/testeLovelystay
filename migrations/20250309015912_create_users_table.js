@@ -6,6 +6,7 @@ exports.up = function (knex) {
         table.string('bio');
         table.string('location');
         table.integer('public_repos').notNullable();
+        table.specificType('languages', 'text[]');
         table.integer('followers').notNullable();
         table.integer('following').notNullable();
         table.string('html_url').notNullable();
