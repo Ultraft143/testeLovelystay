@@ -1,15 +1,18 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+
+require('dotenv').config();
+
 module.exports = {
 
   development: {
     client: 'pg',
     connection: {
-      host: '127.0.0.1',
-      database: 'lovelystay',
-      user: 'postgres',
-      password: '123'
+      host: process.env.DB_HOST,
+      database: process.env.DB_NAME,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD
     },
     pool: {
       min: 2,
@@ -24,10 +27,10 @@ module.exports = {
   staging: {
     client: 'pg',
     connection: {
-      host: '127.0.0.1',
-      database: 'lovelystay',
-      user: 'postgres',
-      password: '123'
+      host: process.env.DB_HOST,
+      database: process.env.DB_NAME,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD
     },
     pool: {
       min: 2,
@@ -42,10 +45,10 @@ module.exports = {
   production: {
     client: 'pg',
     connection: {
-      host: '127.0.0.1',
-      database: 'lovelystay',
-      user: 'postgres',
-      password: '123'
+      host: process.env.DB_HOST,
+      database: process.env.DB_NAME,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD
     },
     pool: {
       min: 2,
