@@ -43,11 +43,16 @@ npm install
 
 3. Set up your PostgreSQL database
 
-Create a PostgreSQL database and configure it directly in the db.ts file. Example connection string in db.ts:
+Now, the database configuration is done through a .env file.
+Create a .env file in the root of the project and add your credentials:
 
-```
-const db = pgp('postgres://username:password@localhost:5432/database_name');
-```
+* DB_HOST=localhost
+* DB_USER=your_username
+* DB_PASSWORD=your_password
+* DB_NAME=your_database
+* DB_URL=your_db_url
+
+In knexfile.js, the database configuration should already use these environment variables.
 
 4. Run database migrations
 
@@ -76,7 +81,7 @@ The database contains a table users with the following columns:
 * following: Number of users the GitHub user is following.
 * html_url: URL to the user's GitHub profile.
 
-## Tests
+## Tests (NOT UP TO DATE)
 
 Database:
 
