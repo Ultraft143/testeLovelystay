@@ -1,9 +1,16 @@
 /* eslint-disable max-len, indent, quotes */
 import pgPromise from 'pg-promise';
+import dotenv from 'dotenv';
 import { GitHubUser } from '../types/types';
 
+dotenv.config();
+
 const pgp = pgPromise();
-const db = pgp('postgres://postgres:123@localhost:5432/lovelystay');
+const dbUrl = process.env.DB_URL;
+if (!dbUrl) {
+  throw new Error('Missing DB_URL in environment variables');
+}
+const db = pgp(dbUrl);
 export default db;
 
 export const insertGitHubUser = async (user: GitHubUser): Promise<void> => {
